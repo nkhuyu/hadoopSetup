@@ -22,7 +22,7 @@ install openssh-server
 sudo addgroup hadoop
 sudo adduser --ingroup hadoop hduser
 sudo adduser hduser sudo
-sudo adduser hduser admin
+#sudo adduser hduser admin
 
 # user doesn't need to enter password after the sudo command
-echo "hduser ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoer
+sudo echo "hduser ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoer
