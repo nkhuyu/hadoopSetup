@@ -2,7 +2,6 @@
 
 # This script will set up general ubuntu enviroment.
 
-cd ~
 sudo apt-get update
 
 function install {
@@ -15,16 +14,14 @@ install openssh-server
 
 # install and config vim
 install vim
-cp ubuntu/.vimrc ~/.
-source ~/.vimrc
+scp ./ubuntu/.vimrc ~/.
 
 # install and config git
 install git
-cp ubuntu/.gitconfig ~/.
+scp ./ubuntu/.gitconfig ~/.
 
 # install htop
 install htop
 
 # setup bash
-cp ubuntu/.bashrc ~/.
-source ~/.bashrc
+scp ./ubuntu/.bashrc ~/.
