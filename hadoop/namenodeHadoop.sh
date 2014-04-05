@@ -40,8 +40,19 @@ fi
 cd /usr/local/hadoop/etc/hadoop
 
 # core-site.xml
-#sudo -u hduser sed -i.bak 's=<configuration>=<configuration>\<property>\<name>fs\.default\.name\</name>\<value>hdfs://hadoop0:9000\</value>\</property>=g' core-site.xml
-
-#sudo -u hduser sed -i.bak 's=<configuration>=<configuration>\<property>\<name>dfs\.replication\</name>\<value>1\</value>\</property>=g' core-site.xml
+#sudo -u hduser sed -i.bak 's=<configuration>=<configuration>\<property>\<name>fs\.defaultFS\</name>\<value>hdfs://hadoop0:9000\</value>\</property>=g' core-site.xml
 
 #sudo -u hduser sed -i.bak 's=<configuration>=<configuration>\<property>\<name>hadoop\.temp\.dir\</name>\<value>/tmp/hadoop/-${user.name}\</value>\</property>=g' core-site.xml
+
+cd ~
+mkdir -p mydata/hdfs/datanode
+mkdir -p mydata/hdfs/namenode
+
+cd /usr/local/hadoop/etc/hadoop
+
+# hdfs-site.xml
+sudo -u hduser sed -i.bak 's=<configuration>=<configuration>\<property>\<name>dfs\.replication</name>\<value>1\</value>\</property>\<property>\<name>dfs\.namenode\.name\.dir</name>\<value>file:/home/hduser/mydata/hdfs/namenode</value>\</property>\<property>\<name>dfs\.datanode\.data\.dir</name>\<value>file:/home/hduser/mydata/hdfs/datanode</value>\</property>=g' hdfs-site.xml
+
+# mapred-site.xml
+sudo -u hduser cp mapred-site.xml.template mapred-site.xml
+sudo -u hduser sed -i.bak 's=<configuration>=<configuration>\<property>\<name>mapreduce\.framework\.name</name>\<value>yarn</value>\</property>=g' mapred-site.xml
