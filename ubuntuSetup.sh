@@ -8,13 +8,21 @@ function install {
 # install openssh-server
 install openssh-server
 
-# install vim
+# install and config vim
 install vim
+cp .vimrc ~/.
+source .vimrc
 
-# install git
+# install and config git
 install git
+cp .gitcong ~/.
+source .gitconfig
 
 # install htop
 install htop
+
+# setup bash
+cp .bashrc ~/.
+source .bashrc
 
 # install java
