@@ -26,3 +26,11 @@ install htop
 # setup bash
 scp ./ubuntu/.bashrc ~/.
 source ~/.bashrc
+
+# create key file if not exist
+if [ -f ~/.ssh/id_rsa ];
+then
+    echo "key file exists"
+else
+    ssh-keygen -t rsa -N "" -f ~/.ssh/id_rsa
+fi
