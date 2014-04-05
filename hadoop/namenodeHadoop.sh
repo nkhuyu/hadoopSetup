@@ -36,3 +36,7 @@ pwd
 # Check that Hadoop is installed
 /usr/local/hadoop/bin/hadoop version
 
+
+# Edit configuration files
+sudo -u hduser sed -i.bak 's=<configuration>=<configuration>\<property>\<name>fs\.default\.name\</name>\<value>hdfs://hadoop0:9000\</value>\</property>=g' core-site.xml 
+
