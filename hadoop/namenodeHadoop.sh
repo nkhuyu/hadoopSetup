@@ -10,8 +10,8 @@
 cd ~
 if [ ! -f hadoop-2.2.0.tar.gz ]; then
     wget http://apache.osuosl.org/hadoop/common/hadoop-2.2.0/hadoop-2.2.0.tar.gz
-fi
 sudo tar vxzf hadoop-2.2.0.tar.gz -C /usr/local
+
 cd /usr/local
 sudo mv hadoop-2.2.0 hadoop
 sudo chown -R hduser:hadoop hadoop
@@ -31,12 +31,17 @@ sudo sh -c 'echo export HADOOP_OPTS=\"-Djava.library.path=\$HADOOP_INSTALL/lib\"
 # Modify JAVA_HOME 
 cd /usr/local/hadoop/etc/hadoop
 sudo -u hduser sed -i.bak s=\${JAVA_HOME}=/usr/lib/jvm/jdk/=g hadoop-env.sh
-pwd
 
 # Check that Hadoop is installed
 /usr/local/hadoop/bin/hadoop version
-
+fi
 
 # Edit configuration files
-sudo -u hduser sed -i.bak 's=<configuration>=<configuration>\<property>\<name>fs\.default\.name\</name>\<value>hdfs://hadoop0:9000\</value>\</property>=g' core-site.xml 
+cd /usr/local/hadoop/etc/hadoop
 
+# core-site.xml
+#sudo -u hduser sed -i.bak 's=<configuration>=<configuration>\<property>\<name>fs\.default\.name\</name>\<value>hdfs://hadoop0:9000\</value>\</property>=g' core-site.xml
+
+#sudo -u hduser sed -i.bak 's=<configuration>=<configuration>\<property>\<name>dfs\.replication\</name>\<value>1\</value>\</property>=g' core-site.xml
+
+#sudo -u hduser sed -i.bak 's=<configuration>=<configuration>\<property>\<name>hadoop\.temp\.dir\</name>\<value>/tmp/hadoop/-${user.name}\</value>\</property>=g' core-site.xml
