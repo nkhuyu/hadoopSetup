@@ -14,15 +14,15 @@ install openssh-server
 
 # install and config vim
 install vim
-scp ~/hadoopSetup/ubuntu/.vimrc ~/.
+sudo scp ~/hadoopSetup/ubuntu/.vimrc ~/.
 
 # install and config git
 install git
-scp ~/hadoopSetup/ubuntu/.gitconfig ~/.
+sudo scp ~/hadoopSetup/ubuntu/.gitconfig ~/.
 
 # install htop
 install htop
 
 # setup bash
-scp ~/hadoopSetup/ubuntu/.bashrc ~/.
+sudo scp ~/hadoopSetup/ubuntu/.bashrc ~/.
 source ~/.bashrc

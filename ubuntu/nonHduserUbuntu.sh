@@ -15,20 +15,20 @@ function install {
 
 # install and config git
 install git
-scp ~/hadoopSetup/ubuntu/.gitconfig ~/.
+sudo scp ~/hadoopSetup/ubuntu/.gitconfig ~/.
 
 # install openssh-server
 install openssh-server
 
 # install and config vim
 install vim
-scp ~/hadoopSetup/ubuntu/.vimrc ~/.
+sudo scp ~/hadoopSetup/ubuntu/.vimrc ~/.
 
 # install htop
 install htop
 
 # setup bash
-scp ~/hadoopSetup/ubuntu/.bashrc ~/.
+sudo scp ~/hadoopSetup/ubuntu/.bashrc ~/.
 source ~/.bashrc
 
 # create key file if not exist
