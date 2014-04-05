@@ -1,10 +1,9 @@
 #!/bin/bash -x
 
 # manually steps:
-# 1. edit /etc/hostname file make host like hadoop0  hadoop1 hadoop2
-# 2. copy datanodes public keys to namenode (datanodes have access to namenode)
-# 3. copy namenode authorized key to all slave nodes (namenode has access to all datanodes
-# and datanodes have access to itself.)
+# 1. edit /etc/hostname file mkhost like hadoop0  hadoop1 hadoop2
+# 2. copy data node public key to name node
+# 3. copy namenode authorized key to all slave node
 
 sudo apt-get update
 
