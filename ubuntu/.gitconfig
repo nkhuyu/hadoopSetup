@@ -1,0 +1,13 @@
+[color]
+	ui = true
+[user]
+	name = Yu Hu
+	email = nkhuyu@gmail.com
+[alias]
+    lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset'
+    s = status
+    l = log --graph --decorate
+    c = commit
+    su = submodule update
+
+
