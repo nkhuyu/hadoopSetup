@@ -1,5 +1,10 @@
 #!/bin/bash -x
 
+# This script will set up general ubuntu enviroment.
+
+cd ~
+sudo apt-get update
+
 function install {
     package_name=$1
     sudo apt-get install $package_name
@@ -24,6 +29,3 @@ install htop
 # setup bash
 cp ubuntu/.bashrc ~/.
 source .bashrc
-
-# install java
-
