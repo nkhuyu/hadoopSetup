@@ -24,5 +24,5 @@ sudo adduser --ingroup hadoop hduser
 sudo adduser hduser sudo
 #sudo adduser hduser admin
 
-# user doesn't need to enter password after the sudo command
+# user doesn't need to enter password after the sudo command, this commands may need to do it manually
 sudo echo "hduser ALL=(ALL) NOPASSWD:ALL" >> /etc/sudoers
