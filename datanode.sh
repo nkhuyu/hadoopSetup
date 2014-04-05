@@ -2,5 +2,6 @@
 
 hostname=`hostname`;
 
-sh ubuntu/nonHduserUbuntu.sh
-ssh hduser@$hostnamesh sh ubuntu/hduserUbuntu.sh
+./ubuntu/nonHduserUbuntu.sh
+scp -r ~/hadoopSetup hduser@$hostname:~/.
+ssh hduser@$hostname "~/hadoopSetup/ubuntu/hduserUbuntu.sh"

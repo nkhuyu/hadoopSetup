@@ -1,6 +1,6 @@
 #!/bin/bash -x
 
-# This script will set up general ubuntu enviroment.
+# This script will set up general ubuntu enviroment for hduser.
 
 sudo apt-get update
 
@@ -14,15 +14,15 @@ install openssh-server
 
 # install and config vim
 install vim
-scp ./ubuntu/.vimrc ~/.
+scp ~/hadoopSetup/ubuntu/.vimrc ~/.
 
 # install and config git
 install git
-scp ./ubuntu/.gitconfig ~/.
+scp ~/hadoopSetup/ubuntu/.gitconfig ~/.
 
 # install htop
 install htop
 
 # setup bash
-scp ./ubuntu/.bashrc ~/.
+scp ~/hadoopSetup/ubuntu/.bashrc ~/.
 source ~/.bashrc
