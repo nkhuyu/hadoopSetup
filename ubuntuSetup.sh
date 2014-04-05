@@ -10,19 +10,20 @@ install openssh-server
 
 # install and config vim
 install vim
-cp .vimrc ~/.
+cp ubuntu/.vimrc ~/.
 source .vimrc
 
 # install and config git
 install git
-cp .gitcong ~/.
+cp ubuntu/.gitcong ~/.
 source .gitconfig
 
 # install htop
 install htop
 
 # setup bash
-cp .bashrc ~/.
+cp ubuntu/.bashrc ~/.
 source .bashrc
 
 # install java
+
