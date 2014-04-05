@@ -15,12 +15,10 @@ install openssh-server
 # install and config vim
 install vim
 scp ./ubuntu/.vimrc ~/.
-source ~/.vimrc
 
 # install and config git
 install git
 scp ./ubuntu/.gitconfig ~/.
-source ~/.gitconfig
 
 # install htop
 install htop
