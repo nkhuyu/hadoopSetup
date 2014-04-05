@@ -1,0 +1,13 @@
+Steps for datanode:
+0. change host name to hadoopX ( vi /etc/hostname)
+1. install git 
+    sudo apt-get install git
+    git clone https://github.com/nkhuyu/hadoopSetup
+2. cd hadoopSetup
+3. run ubuntu setup script
+    sh ubuntuSetup.sh
+4. ssh hduser@hadoopX
+    sudo apt-get install git
+    git clone https://github.com/nkhuyu/hadoopSetup
+5. run datanode script
+    sh datanode.sh
