@@ -40,9 +40,9 @@ fi
 cd /usr/local/hadoop/etc/hadoop
 
 # core-site.xml
-#sudo -u hduser sed -i.bak 's=<configuration>=<configuration>\<property>\<name>fs\.defaultFS\</name>\<value>hdfs://hadoop0:9000\</value>\</property>=g' core-site.xml
+sudo -u hduser sed -i.bak 's=<configuration>=<configuration>\<property>\<name>fs\.defaultFS\</name>\<value>hdfs://hadoop0:9000\</value>\</property>=g' core-site.xml
 
-#sudo -u hduser sed -i.bak 's=<configuration>=<configuration>\<property>\<name>hadoop\.temp\.dir\</name>\<value>/tmp/hadoop/-${user.name}\</value>\</property>=g' core-site.xml
+sudo -u hduser sed -i.bak 's=<configuration>=<configuration>\<property>\<name>hadoop\.temp\.dir\</name>\<value>/tmp/hadoop/-${user.name}\</value>\</property>=g' core-site.xml
 
 cd ~
 mkdir -p mydata/hdfs/datanode
