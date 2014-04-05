@@ -1,5 +1,9 @@
 #!/bin/bash -x
 
+# edit /etc/hostname file
+# mkhost like hadoop0  hadoop1 hadoop2
+
+
 cd ~
 sudo apt-get update
 
