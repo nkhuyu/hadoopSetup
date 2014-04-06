@@ -4,7 +4,7 @@
 hadoop jar /usr/local/hadoop/share/hadoop/mapreduce/hadoop-mapreduce-examples-2.2.0.jar pi 2 5
 
 # word count
-if hadoop fs -test –d output;
+if hadoop fs -test -d output;
 then
     hadoop fs -rm -r output
 fi
