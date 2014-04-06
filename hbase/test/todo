@@ -1,0 +1,4 @@
+hadoop 2.2.0 + hbase 0.96
+
+1. test hbase jave api
+2. test hbase map reduce job
