@@ -1,6 +1,10 @@
 #!/bin/bash -x
 
 # This script will set up general ubuntu enviroment for hduser.
+#
+# fix no route to host
+# sudo service ssh restart
+
 
 sudo apt-get update
 
